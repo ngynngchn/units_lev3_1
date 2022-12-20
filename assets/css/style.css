@@ -8,11 +8,6 @@
   src: url(../fonts/Maven_Pro/static/MavenPro-Regular.ttf);
 }
 
-@font-face {
-  font-family: "Maven bold";
-  src: url(../fonts/Maven_Pro/static/MavenPro-Bold.ttf);
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -21,7 +16,7 @@
 
 /* Header */
 header {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: #2c2c2c;
   color: white;
@@ -30,7 +25,7 @@ header {
 }
 
 h1 {
-  width: 10px;
+  width: 1vw;
   letter-spacing: 0.5rem;
   font-size: 1rem;
 }
@@ -42,9 +37,9 @@ header section {
     rgba(25, 72, 148, 1) 40%,
     rgba(61, 200, 213, 1) 100%
   );
-  width: 210px;
-  height: 200px;
-  margin: 120px auto;
+  width: fit-content;
+  height: 28vh;
+  margin: 200px auto 120px;
   padding: 7px;
   border-radius: 4px;
 }
@@ -67,7 +62,11 @@ header h2 {
 header section p {
   font-size: 0.8rem;
   opacity: 0.5;
-  width: 210px;
+  width: fit-content;
+}
+
+nav {
+  text-align: end;
 }
 
 nav ul li a {
@@ -84,10 +83,6 @@ nav ul li {
   list-style-type: none;
 }
 
-nav {
-  text-align: end;
-}
-
 /* Main Page */
 
 main {
@@ -95,18 +90,10 @@ main {
   width: 80vw;
   height: 100vh;
 }
-section {
-  margin-top: 40px;
-  margin-left: 90px;
-}
-section p {
-  font-family: Maven;
-  margin-bottom: 3rem;
-  width: 40vw;
-}
 
 main section {
   padding-top: 200px;
+  margin-top: 40px 0 0 90px;
 }
 
 main section article:first-of-type {
@@ -114,28 +101,32 @@ main section article:first-of-type {
   background: url("../img/background.svg") no-repeat;
   background-position: top left;
 }
-article {
-  width: 80%;
+
+main section article {
   margin: auto;
   height: 100vh;
+  width: 60vw;
 }
 
-article img {
-  width: 100%;
+main section article img {
+  width: 60vw;
   border-radius: 5px;
 }
 
-article h4 {
+main section article h4 {
   font-size: 2rem;
-  font-family: "Gilda Display";
+  /* font-family: "Gilda Display"; */
   margin-block: 20px;
-}
-article p {
-  font-family: Maven;
-  text-transform: uppercase;
 }
 
 main section article h3 {
   font-size: 3rem;
   padding-block: 100px 50px;
+}
+
+main section article p {
+  font-family: Maven;
+  margin-bottom: 3rem;
+  width: 40vw;
+  text-transform: uppercase;
 }
